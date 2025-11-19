@@ -272,7 +272,7 @@
         const displayStats = stats => {
             document.getElementById('stats').innerHTML = `
                 <div class="stat-card"><div class="stat-number">${stats.total}</div><div class="stat-label">Всего экзаменов</div></div>
-                <div class="stat-card"><div class="stat-number" style="color:#34d399">${stats.passed}</div><div class="stat-label">Сдали (${stats.passRate}%)</div></div>
+                <div class="stat-card"><div class="stat-number" style="color:#34d399">${stats.passed}</div><div class="stat-label">Сдали</div></div>
                 <div class="stat-card"><div class="stat-number" style="color:#f87171">${stats.failed}</div><div class="stat-label">Провалили</div></div>
                 <div class="stat-card"><div class="stat-number" style="color:${stats.passRate>=80?'#34d399':stats.passRate>=60?'#f59e0b':'#f87171'}">${stats.passRate}%</div><div class="stat-label">Процент сдачи</div></div>`;
         };
