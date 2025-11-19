@@ -16,225 +16,223 @@
             --text-muted: #94c8ff;
             --accent-glow: #64b4ff88;
         }
-        * { margin:0; padding:0; box-sizing:border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family:'Roboto',sans-serif;
-            background:url('https://ripx.ru/uploads/s5ywn1/691dd030a7dcc.jpg') no-repeat center center fixed;
-            background-size:cover;
-            color:var(--text);
-            min-height:100vh;
-            position:relative;
-            overflow-x:hidden;
+            font-family: 'Roboto', sans-serif;
+            background: url('https://ripx.ru/uploads/s5ywn1/691dd030a7dcc.jpg') center/cover fixed;
+            color: var(--text);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
         body::before {
-            content:'';
-            position:absolute;
-            top:0; left:0; right:0; bottom:0;
-            background:linear-gradient(135deg,rgba(5,15,40,0.92),rgba(10,30,80,0.85));
-            z-index:-1;
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(5, 15, 40, 0.92), rgba(10, 30, 80, 0.85));
+            z-index: -1;
         }
-        .container { max-width:1500px; margin:0 auto; padding:16px; }
-        .header { text-align:center; padding:30px 15px 20px; }
+        .container { max-width: 1500px; margin: 0 auto; padding: 16px; }
+        .header { text-align: center; padding: 30px 15px 20px; }
         .header h1 {
-            font-family:'Orbitron',sans-serif;
-            font-size:clamp(2.5rem,8vw,5rem);
-            font-weight:900;
-            background:linear-gradient(90deg,#64b4ff,#60a5fa,#3b82f6);
-            -webkit-background-clip:text;
-            background-clip:text;
-            -webkit-text-fill-color:transparent;
-            text-shadow:0 0 40px var(--accent-glow);
-            letter-spacing:2px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            background: linear-gradient(90deg, #64b4ff, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px var(--accent-glow);
+            letter-spacing: 2px;
         }
-        .header p { font-size:1.1rem; color:var(--text-muted); margin-top:8px; }
+        .header p { font-size: 1.1rem; color: var(--text-muted); margin-top: 8px; }
         .search-bar {
-            max-width:600px;
-            margin:20px auto;
-            display:flex;
-            gap:10px;
-            padding:0 10px;
+            max-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            gap: 10px;
+            padding: 0 10px;
         }
         .search-input {
-            flex:1;
-            padding:14px 18px;
-            background:var(--glass);
-            border:1px solid var(--glass-border);
-            border-radius:14px;
-            color:white;
-            font-size:1rem;
-            backdrop-filter:blur(12px);
-            box-shadow:0 6px 20px rgba(0,0,0,0.3);
+            flex: 1;
+            padding: 14px 18px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            color: white;
+            font-size: 1rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
-        .search-input::placeholder { color:#94c8ff; opacity:0.8; }
+        .search-input::placeholder { color: #94c8ff; opacity: 0.8; }
         .search-btn {
-            padding:0 24px;
-            background:var(--primary);
-            border:none;
-            border-radius:14px;
-            color:white;
-            font-weight:bold;
-            cursor:pointer;
-            transition:all 0.3s;
-            box-shadow:0 6px 20px rgba(100,180,255,0.4);
+            padding: 0 24px;
+            background: var(--primary);
+            border: none;
+            border-radius: 14px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(100,180,255,0.4);
         }
-        .search-btn:hover { background:#3b82f6; transform:translateY(-2px); }
+        .search-btn:hover { background: #3b82f6; transform: translateY(-2px); }
         .stats-grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-            gap:14px;
-            margin:30px 0;
-            padding:0 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 14px;
+            margin: 30px 0;
+            padding: 0 10px;
         }
         .stat-card {
-            background:var(--glass);
-            border:1px solid var(--glass-border);
-            border-radius:16px;
-            padding:20px 12px;
-            text-align:center;
-            backdrop-filter:blur(14px);
-            transition:transform 0.3s;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 20px 12px;
+            text-align: center;
+            backdrop-filter: blur(14px);
+            transition: transform 0.3s;
         }
-        .stat-card:hover { transform:translateY(-6px); }
-        .stat-number {
-            font-size:2.2rem;
-            font-weight:900;
-            font-family:'Orbitron',sans-serif;
-        }
-        .stat-label { color:var(--text-muted); margin-top:6px; font-size:0.95rem; }
+        .stat-card:hover { transform: translateY(-6px); }
+        .stat-number { font-size: 2.2rem; font-weight: 900; font-family: 'Orbitron', sans-serif; }
+        .stat-label { color: var(--text-muted); margin-top: 6px; font-size: 0.95rem; }
         .cards-container {
-            display:grid;
-            grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
-            gap:18px;
-            padding:10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 18px;
+            padding: 10px;
         }
-        @media (max-width:480px) {
-            .cards-container { grid-template-columns:1fr; }
-        }
+        @media (max-width: 480px) { .cards-container { grid-template-columns: 1fr; } }
         .card {
-            background:var(--glass);
-            border:1px solid var(--glass-border);
-            border-radius:18px;
-            overflow:hidden;
-            cursor:pointer;
-            transition:all 0.4s;
-            box-shadow:0 8px 25px rgba(0,0,0,0.3);
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
         .card:hover {
-            transform:translateY(-10px);
-            box-shadow:0 20px 50px rgba(100,180,255,0.35);
-            border-color:var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(100,180,255,0.35);
+            border-color: var(--primary);
         }
-        .card.passed { border-left:6px solid var(--success); }
-        .card.failed { border-left:6px solid var(--danger); }
+        .card.passed { border-left: 6px solid var(--success); }
+        .card.failed { border-left: 6px solid var(--danger); }
         .card-header {
-            background:linear-gradient(135deg,rgba(100,180,255,0.3),rgba(59,130,246,0.5));
-            padding:18px;
-            text-align:center;
+            background: linear-gradient(135deg, rgba(100,180,255,0.3), rgba(59,130,246,0.5));
+            padding: 18px;
+            text-align: center;
         }
         .badge {
-            padding:8px 20px;
-            background:rgba(59,130,246,0.9);
-            color:white;
-            border-radius:50px;
-            font-weight:700;
-            font-size:0.9rem;
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(59,130,246,0.9);
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
         }
-        .card-title { font-size:1.4rem; margin:10px 0 4px; font-weight:700; }
-        .card-date { color:var(--text-muted); font-size:0.95rem; }
-        .card-body { padding:18px; }
+        .card-title { font-size: 1.4rem; margin: 10px 0 4px; font-weight: 700; }
+        .card-date { color: var(--text-muted); font-size: 0.95rem; }
+        .card-body { padding: 18px; }
         .info-row {
-            display:flex;
-            justify-content:space-between;
-            padding:10px 0;
-            border-bottom:1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
-        .info-row:last-child { border:none; }
-        .label { color:var(--text-muted); font-size:0.95rem; }
-        .value { font-weight:600; }
+        .info-row:last-child { border: none; }
         .result-badge {
-            padding:7px 16px;
-            border-radius:12px;
-            font-weight:700;
-            font-size:0.9rem;
+            padding: 7px 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
         }
-        .pass { background:rgba(52,211,153,0.25); color:var(--success); border:2px solid var(--success); }
-        .fail { background:rgba(248,113,113,0.25); color:var(--danger); border:2px solid var(--danger); }
+        .pass { background: rgba(52,211,153,0.25); color: var(--success); border: 2px solid var(--success); }
+        .fail { background: rgba(248,113,113,0.25); color: var(--danger); border: 2px solid var(--danger); }
         .modal {
-            display:none;
-            position:fixed;
-            top:0; left:0; width:100%; height:100%;
-            z-index:9999;
-            align-items:center;
-            justify-content:center;
-            background:rgba(0,0,0,0.85);
-            backdrop-filter:blur(10px);
-            padding:15px;
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.88);
+            backdrop-filter: blur(12px);
+            padding: 15px;
         }
-        .modal.active { display:flex; }
+        .modal.active { display: flex; }
         .modal-content {
-            background:var(--glass);
-            border:2px solid var(--primary);
-            border-radius:20px;
-            width:100%;
-            max-width:900px;
-            max-height:92vh;
-            overflow:hidden;
-            box-shadow:0 0 70px rgba(100,180,255,0.5);
+            background: var(--glass);
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 900px;
+            max-height: 92vh;
+            overflow: hidden;
+            box-shadow: 0 0 80px rgba(100,180,255,0.6);
+            backdrop-filter: blur(16px);
         }
         .modal-header {
-            background:linear-gradient(135deg,rgba(59,130,246,0.8),rgba(30,58,110,0.95));
-            padding:25px;
-            text-align:center;
-            position:relative;
+            position: relative;
+            background: linear-gradient(135deg, rgba(59,130,246,0.8), rgba(30,58,110,0.95));
+            padding: 28px 28px 20px;
+            text-align: center;
         }
         .modal-close {
-            position:absolute;
-            top:12px; right:12px;
-            width:42px; height:42px;
-            background:rgba(239,68,68,0.4);
-            border:2px solid var(--danger);
-            border-radius:50%;
-            color:var(--danger);
-            font-size:26px;
-            cursor:pointer;
-            display:flex;
-            align-items:center;
-            justify-content:center;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 56px;
+            height: 56px;
+            background: rgba(239,68,68,0.25);
+            border: 2px solid var(--danger);
+            border-radius: 50%;
+            color: var(--danger);
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
         }
         .modal-close:hover {
-            background:var(--danger);
-            color:white;
-            transform:rotate(90deg);
+            background: var(--danger);
+            color: white;
+            transform: scale(1.15);
+            box-shadow: 0 0 30px rgba(248,113,113,0.8);
         }
-        .modal-title { font-family:'Orbitron',sans-serif; font-size:1.9rem; }
-        .modal-body { padding:20px; max-height:65vh; overflow-y:auto; }
-        .modal-score {
-            text-align:center;
-            font-size:2.8rem;
-            font-weight:900;
-            font-family:'Orbitron',sans-serif;
-            margin:15px 0;
+        @media (max-width: 768px) {
+            .modal-close { width: 64px; height: 64px; font-size: 36px; top: 14px; right: 14px; }
         }
+        .modal-title { font-family: 'Orbitron', sans-serif; font-size: 1.9rem; margin-bottom: 6px; }
+        .modal-body { padding: 20px; max-height: 65vh; overflow-y: auto; }
+        .modal-score { text-align: center; font-size: 2.8rem; font-weight: 900; font-family: 'Orbitron', sans-serif; margin: 15px 0; color: var(--primary); }
         .answer-item {
-            background:rgba(255,255,255,0.07);
-            border-left:4px solid var(--primary);
-            padding:14px;
-            border-radius:10px;
-            margin-bottom:14px;
+            background: rgba(255,255,255,0.07);
+            border-left: 4px solid var(--primary);
+            padding: 14px;
+            border-radius: 10px;
+            margin-bottom: 14px;
         }
-        .question { color:var(--primary); font-weight:700; margin-bottom:6px; font-size:1.05rem; }
+        .question { color: var(--primary); font-weight: 700; margin-bottom: 6px; font-size: 1.05rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>LVPD Экзамены</h1>
-            <p>Результаты экзаменов Los Venturas Police Department</p>
+            <h1>lvpd | экзамены</h1>
+            <p>Результаты экзаменов для лидера Bobby Harrison</p>
         </div>
+
         <div class="search-bar">
-            <input type="text" id="searchInput" class="search-input" placeholder="Введите ник или #0000 для поиска...">
+            <input type="text" id="searchInput" class="search-input" placeholder="Введите ник или номер аккаунта..." autocomplete="off">
             <button class="search-btn" onclick="filterCards()">Поиск</button>
         </div>
+
         <div id="stats" class="stats-grid"></div>
         <div id="content"></div>
     </div>
@@ -247,11 +245,11 @@
                 <p id="modalDate"></p>
             </div>
             <div class="modal-body">
-                <div style="text-align:center;">
+                <div style="text-align:center">
                     <div class="modal-score" id="modalScore">0/19</div>
                     <span id="resultBadge" class="result-badge pass">Экзамен сдан</span>
                 </div>
-                <div id="answersList" style="margin-top:25px;"></div>
+                <div id="answersList" style="margin-top:25px"></div>
             </div>
         </div>
     </div>
@@ -261,71 +259,48 @@
         const PASSING_SCORE = 12;
         let allData = [];
 
-        function formatDate(iso) {
-            const d = new Date(iso);
-            return d.toLocaleDateString('ru-RU', {day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'});
-        }
+        const formatDate = iso => new Date(iso).toLocaleDateString('ru-RU', {day:'numeric', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit'});
 
-        function calculateStats(data) {
+        const calculateStats = data => {
             const total = data.length;
             const passed = data.filter(i => i.score >= PASSING_SCORE).length;
             const failed = total - passed;
             const passRate = total > 0 ? Math.round((passed / total) * 100) : 0;
             return {total, passed, failed, passRate};
-        }
+        };
 
-        function displayStats(stats) {
+        const displayStats = stats => {
             document.getElementById('stats').innerHTML = `
-                <div class="stat-card">
-                    <div class="stat-number">${stats.total}</div>
-                    <div class="stat-label">Всего экзаменов</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color:#34d399">${stats.passed}</div>
-                    <div class="stat-label">Сдали (${stats.passRate}%)</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color:#f87171">${stats.failed}</div>
-                    <div class="stat-label">Провалили</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color:${stats.passRate>=80?'#34d399':stats.passRate>=60?'#f59e0b':'#f87171'}">${stats.passRate}%</div>
-                    <div class="stat-label">Процент сдачи</div>
-                </div>
-            `;
-        }
+                <div class="stat-card"><div class="stat-number">${stats.total}</div><div class="stat-label">Всего экзаменов</div></div>
+                <div class="stat-card"><div class="stat-number" style="color:#34d399">${stats.passed}</div><div class="stat-label">Сдали (${stats.passRate}%)</div></div>
+                <div class="stat-card"><div class="stat-number" style="color:#f87171">${stats.failed}</div><div class="stat-label">Провалили</div></div>
+                <div class="stat-card"><div class="stat-number" style="color:${stats.passRate>=80?'#34d399':stats.passRate>=60?'#f59e0b':'#f87171'}">${stats.passRate}%</div><div class="stat-label">Процент сдачи</div></div>`;
+        };
 
-        function createCard(item) {
+        const createCard = item => {
             const card = document.createElement('div');
             card.className = `card ${item.score >= PASSING_SCORE ? 'passed' : 'failed'}`;
             const badgeText = item.score >= PASSING_SCORE ? 'Сдал' : 'Провалил';
             const badgeClass = item.score >= PASSING_SCORE ? 'pass' : 'fail';
             card.innerHTML = `
                 <div class="card-header">
-                    <div class="badge">LVPD Экзамен</div>
-                    <div class="card-title">${item.account} </div>
+                    <div class="badge">lvpd | bobby</div>
+                    <div class="card-title">${item.account}</div>
                     <div class="card-date">${formatDate(item.time)}</div>
                 </div>
                 <div class="card-body">
-                    <div class="info-row">
-                        <span class="label">Результат</span>
-                        <span class="result-badge ${badgeClass}">${badgeText}</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">Баллы</span>
-                        <span class="value">${item.score}/19 </span>
-                    </div>
-                </div>
-            `;
+                    <div class="info-row"><span>Результат</span><span class="result-badge ${badgeClass}">${badgeText}</span></div>
+                    <div class="info-row"><span>Баллы</span><span>${item.score}/19</span></div>
+                </div>`;
             card.onclick = () => openModal(item);
             return card;
-        }
+        };
 
-        function openModal(item) {
-            document.getElementById('modalName').textContent = item.account + ' ';
+        const openModal = item => {
+            document.getElementById('modalName').textContent = item.account;
             document.getElementById('modalDate').textContent = formatDate(item.time);
             document.getElementById('modalScore').textContent = `${item.score}/19`;
-            const badge = document.getElementById('resultBadge);
+            const badge = document.getElementById('resultBadge');
             if (item.score >= PASSING_SCORE) {
                 badge.className = 'result-badge pass';
                 badge.textContent = 'Экзамен сдан';
@@ -335,57 +310,57 @@
             }
             let html = '';
             for (const [q, a] of Object.entries(item.answers || {})) {
-                html += `
-                    <div class="answer-item">
-                        <div class="question">${q}</div>
-                        <div><strong>${a || '—'}</strong></div>
-                    </div>
-                `;
+                html += `<div class="answer-item"><div class="question">${q}</div><div><strong>${a || '—'}</strong></div></div>`;
             }
-            document.getElementById('answersList').innerHTML = html || '<p style="text-align:center;color:#94c8ff;">Ответы отсутствуют</p>';
+            document.getElementById('answersList').innerHTML = html || '<p style="text-align:center;color:#94c8ff">Ответы отсутствуют</p>';
             document.getElementById('modal').classList.add('active');
-        }
+        };
 
-        function closeModal() {
-            document.getElementById('modal').classList.remove('active');
-        }
+        const closeModal = () => document.getElementById('modal').classList.remove('active');
 
-        function filterCards() {
+        const filterCards = () => {
             const query = document.getElementById('searchInput').value.trim().toLowerCase().replace(/^#/, '');
             const container = document.querySelector('.cards-container');
             container.innerHTML = '';
+
+            if (query === '') {
+                allData.forEach(item => container.appendChild(createCard(item)));
+                return;
+            }
+
             const filtered = allData.filter(item => 
-                item.account.toLowerCase().replace(/_/g,'').replace('#','').includes(query)
+                item.account.toLowerCase().replace(/_/g, '').includes(query)
             );
+
             if (filtered.length === 0) {
-                container.innerHTML = '<p style="text-align:center;grid-column:1/-1;padding:50px;color:#94c8ff;font-size:1.2rem;">Ничего не найдено</p>';
+                container.innerHTML = '<p style="text-align:center;grid-column:1/-1;padding:50px;color:#94c8ff;font-size:1.2rem">Ничего не найдено</p>';
             } else {
                 filtered.forEach(item => container.appendChild(createCard(item)));
             }
-        }
+        };
 
-        document.getElementById('searchInput').addEventListener('keyup', e => {
-            if (e.key === 'Enter') filterCards();
-        });
-
-        async function loadData() {
-            document.getElementById('content').innerHTML = `<div style="text-align:center;padding:80px;font-size:1.4rem;color:#94c8ff;">Загрузка данных LVPD...</div>`;
+        const loadData = async () => {
+            document.getElementById('content').innerHTML = `<div style="text-align:center;padding:80px;font-size:1.4rem;color:#94c8ff">Загрузка данных LVPD...</div>`;
             try {
                 const res = await fetch(API_URL);
                 if (!res.ok) throw new Error();
                 const data = await res.json();
-                allData = data.sort((a,b) => new Date(b.time) - new Date(a.time));
+                allData = data.sort((a, b) => new Date(b.time) - new Date(a.time));
                 displayStats(calculateStats(allData));
-                const container = document.getElementById('content');
-                container.innerHTML = '<div class="cards-container"></div>';
-                const grid = container.querySelector('.cards-container');
-                allData.forEach(item => grid.appendChild(createCard(item)));
+                document.getElementById('content').innerHTML = '<div class="cards-container"></div>';
+                const container = document.querySelector('.cards-container');
+                allData.forEach(item => container.appendChild(createCard(item)));
             } catch {
-                document.getElementById('content').innerHTML = '<div style="text-align:center;padding:80px;color:#f87171;font-size:1.3rem;">Ошибка загрузки данных</div>';
+                document.getElementById('content').innerHTML = '<div style="text-align:center;padding:80px;color:#f87171;font-size:1.3rem">Ошибка загрузки данных</div>';
             }
-        }
+        };
 
-        window.onload = loadData;
+        document.getElementById('searchInput').addEventListener('input', filterCards);
+
+        window.onload = () => {
+            loadData();
+            filterCards();
+        };
     </script>
 </body>
 </html>
